@@ -1,7 +1,7 @@
 body {
  background-color: rgb(95, 165, 218);
 }
-#trump #sanders {
+.trump, .sanders {
   float: right;
   width: 110% !important;
   height: 110% !important;

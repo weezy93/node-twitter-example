@@ -7,21 +7,31 @@
       <img class='img' src='../img/trump.png'>
     </div>
     <div class='col-md-4 col-lg-8'>
-      <span class='name'>#Trump</span>
-      <canvas id="trump" class="chart chart-doughnut"
+      <span class='name'>#Trump on iPhone</span>
+      <canvas class="chart chart-doughnut trump"
       chart-colours='colors' chart-legend="true"
-      chart-data="sandersData" chart-labels="labels">
+      chart-data="trumpDataiPhone" chart-labels="labels">
     </canvas>
-  </div>
+    <span class='name'>#Trump on Android</span>
+    <canvas class="chart chart-doughnut trump"
+    chart-colours='colors' chart-legend="true"
+    chart-data="trumpDataAndroid" chart-labels="labels">
+  </canvas>
+</div>
   <div class='col-md-2 col-lg-4'>
     <img class='img' src='../img/sanders.png'>
   </div>
   <div class='col-md-4 col-lg-8'>
-    <span class='name'>#FeelTheBern</span>
-    <canvas id="sanders" class="chart chart-doughnut"
+    <span class='name'>#FeelTheBern on iPhone</span>
+    <canvas class="chart chart-doughnut sanders"
     chart-colours='colors' chart-legend="true"
-    chart-data="trumpData" chart-labels="labels">
+    chart-data="sandersDataiPhone" chart-labels="labels">
   </canvas>
+  <span class='name'>#FeelTheBern on Android</span>
+  <canvas class="chart chart-doughnut sanders"
+  chart-colours='colors' chart-legend="true"
+  chart-data="sandersDataAndroid" chart-labels="labels">
+</canvas>
 </div>
 </div>
 <br><br>
