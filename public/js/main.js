@@ -13,7 +13,6 @@ function ($scope, socket, $http) {
   $scope.sandersDataAndroid = [0,0,0];
 
   socket.on('newTweet', function (tweet) {
-    console.log(tweet.created_at);
     $scope.tweet = tweet.text;
     $scope.user = tweet.user.screen_name;
     //parse source from payload
@@ -34,32 +33,24 @@ function ($scope, socket, $http) {
         if ((hashtags.indexOf('trump') !== -1) && (sent > 0)){
           switch (source) {
             case 'iPhone': $scope.trumpDataiPhone[0]++;
-            console.log('trumpiPhone');
             break;
             case 'Android': $scope.trumpDataAndroid[0]++;
-            console.log('trumpAndroid');
             break;
           }
         }
         if ((hashtags.indexOf('trump') !== -1) && (sent < 0)){
           switch (source) {
             case 'iPhone': $scope.trumpDataiPhone[1]++;
-            console.log($scope.trumpDataiPhone);
-            console.log('trumpiPhone');
             break;
             case 'Android': $scope.trumpDataAndroid[1]++;
-            console.log('trumpAndroid');
             break;
           }
         }
         if ((hashtags.indexOf('trump') !== -1) && (sent === 0)) {
           switch (source) {
             case 'iPhone': $scope.trumpDataiPhone[2]++;
-            console.log($scope.trumpDataiPhone);
-            console.log('trumpiPhone');
             break;
             case 'Android': $scope.trumpDataAndroid[2]++;
-            console.log('trumpAndroid');
             break;
           }
         }
@@ -68,30 +59,24 @@ function ($scope, socket, $http) {
         if ((hashtags.indexOf('feelthebern') !== -1) && (sent > 0)) {
           switch (source) {
             case 'iPhone': $scope.sandersDataiPhone[0]++;
-            console.log('sandersiPhone');
             break;
             case 'Android': $scope.sandersDataAndroid[0]++;
-            console.log('sandersAndroid');
             break;
           }
         }
         if ((hashtags.indexOf('feelthebern') !== -1) && (sent < 0)) {
             switch (source) {
               case 'iPhone': $scope.sandersDataiPhone[1]++;
-              console.log('sandersiPhone');
               break;
               case 'Android': $scope.sandersDataAndroid[1]++;
-              console.log('sandersAndroid');
               break;
             }
           }
           if ((hashtags.indexOf('feelthebern') !== -1) && (sent === 0)) {
             switch (source) {
               case 'iPhone': $scope.trumpDataiPhone[2]++;
-              console.log('sandersiPhone');
               break;
               case 'Android': $scope.trumpDataAndroid[2]++;
-              console.log('sandersAndroid');
               break;
             }
           }
