@@ -1,6 +1,4 @@
 # Twitter Node Streaming Example
 ### Steps:
-1. clone repo
-1. run ```npm i```
-1. rename _config_example.js to _config.js
-1. add api keys
+Using the npm package sentiment, we did a sentiment analysis on the tweets
+containing the hashtags #Trump and #FeelTheBern.
